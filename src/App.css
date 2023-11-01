@@ -1,9 +1,9 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -12,16 +12,41 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/* horizontal header with logo at left and menu at the right */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+}
+
+/* nav menu shown at the right */
+.right-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right:10px;
+}
+
+/* nav menu items with horizontal alignment */
+.right-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-nav ul li {
+  padding: 0 10px;
 }
 
 .App-link {
